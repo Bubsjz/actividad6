@@ -1,0 +1,21 @@
+<div class="card p-3 text-center">
+    <img src={{myUser.image}} alt="imagen" class="rounded-circle">
+     
+    <p class="pt-4 pb-2 dancing-script">{{myUser.first_name}}</p>
+    
+    <div class="d-flex justify-content-center gap-3">
+
+        <a class="btn d-flex flex-column align-items-center" [routerLink]="['/user', myUser._id]">
+            <i class="fa-solid fa-circle-info pt-2 pb-2"></i>
+            Ver detalle</a>
+
+        <a class="btn d-flex flex-column align-items-center" [routerLink]="['/updateuser', myUser._id]">
+            <i class="fa-solid fa-pen-to-square pt-2 pb-2"></i>
+            Actualizar</a>
+
+        <button class="btn d-flex flex-column align-items-center ms-1" (click)="delete(myUser._id)">
+            <i class="fa-solid fa-trash pt-2 pb-2 ms-1"> </i>
+            Eliminar</button>
+
+    </div>
+</div>

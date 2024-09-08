@@ -1,0 +1,21 @@
+input.ng-invalid.ng-touched {
+    border-color: red !important;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 7px;
+}
+
+input::placeholder {
+    color: grey;          
+    font-size: 14px;        
+    font-style: italic;                   
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 10px
+}

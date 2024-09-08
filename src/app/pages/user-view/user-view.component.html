@@ -1,0 +1,26 @@
+ @if(usuario !== undefined) {      <!-- nota mía: este if evita que me salga error en consola pq angular aun no encuentra datos en "usuario" al renderizar  -->
+
+<section class="container mt-5 d-flex justify-content-between">
+    <div class="pt-5">
+
+        <img src={{usuario.image}} alt="imagen" class="rounded-circle">
+
+    </div>
+
+    <div class="divider mx-3"></div>
+
+    <div class="pt-5">
+        <h1 class="p-2 nunito-sans"> {{usuario.first_name}},</h1>
+        <h3 class="p-2 nunito-sans"> {{usuario.last_name}}</h3>
+        <hr>
+        <h5 class="p-2 pt-4"><strong>Username: </strong>{{usuario.username}}</h5>
+        <h5 class="p-2"><strong>Email: </strong>{{usuario.email}}</h5>
+
+        <div class="pt-4">
+            <button class="btn btn-outline-danger m-1 p-3 px-4" (click)="delete(usuario._id)">Eliminar</button>
+            <a class="btn btn-outline-success m-1 p-3 px-4" [routerLink]="['/updateuser', usuario._id]">Actualizar</a>
+            <a class="btn btn-outline-secondary m-1 p-3 px-4" [routerLink]="['/home']">Volver al listado</a>
+        </div>
+    </div>
+</section>
+}

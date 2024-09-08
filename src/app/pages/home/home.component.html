@@ -1,0 +1,18 @@
+<section class="container p-5 mt-4">
+    <div>
+        <h2>Lista de usuarios</h2>
+    </div>
+    
+    <hr>
+
+    <!-- lista de usuarios -->
+    <div class="my-2 row g-5">
+        @for (user of arrUsers; track user.first_name) { 
+        <article class="col-12 col-md-6 col-lg-4">
+            <app-user-card [myUser]="user" (userDeleted)="removeUser($event)"></app-user-card>
+        
+        </article>
+        }
+    </div>
+
+</section>

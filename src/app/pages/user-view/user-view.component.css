@@ -1,0 +1,11 @@
+.divider {
+    width: 2px;
+    min-height: 200px;
+    background-color: #ccc;
+    align-self: stretch;
+}
+
+.nunito-sans {
+    font-family: 'Nunito Sans';
+    font-weight: 700; 
+}

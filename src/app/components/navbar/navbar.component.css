@@ -1,0 +1,25 @@
+.title {
+    font-size: 27px;
+}
+
+.title-2 {
+    font-size: 20px;
+}
+
+.courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-item.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 6px; 
+    color: white; 
+}
+
+img {
+    height: auto;
+    max-width: 100px,
+}

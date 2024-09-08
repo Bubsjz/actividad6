@@ -1,0 +1,62 @@
+<section class="container p-5 mt-4">
+    
+    <div>
+        <h2>{{tipoTitle}} usuario</h2>
+    </div>
+
+    <hr>
+
+    <form [formGroup]="modelForm" (ngSubmit)="getDataForm()">
+
+
+        <div class="my-4">
+            <label for="first_name" class="form-label"><strong>Nombre usuario</strong></label>
+            <input type="text" class="form-control border-secondary-subtle" placeholder="Introduce nombre de usuario" formControlName="first_name" id="first_name">
+            @if(checkControl ("first_name", "required")) {
+            <p class="error"><i class="fa-solid fa-circle-exclamation"></i> Campo obligatorio</p>
+            }
+            @if(checkControl ("first_name", "minlength")) {
+                <p class="error"><i class="fa-solid fa-circle-exclamation"></i> Mínimo 3 carácteres</p>
+                }
+        </div>
+
+        <div class="my-4">
+            <label for="last_name" class="form-label"><strong>Apellido usuario</strong></label>
+            <input type="text" class="form-control border-secondary-subtle" placeholder="Introduce apellido de usuario" formControlName="last_name" id="last_name">
+            @if(checkControl ("last_name", "required")) {
+                <p class="error"><i class="fa-solid fa-circle-exclamation"></i> Campo obligatorio</p>
+                }
+            @if(checkControl ("last_name", "minlength")) {
+                <p class="error"><i class="fa-solid fa-circle-exclamation"></i> Mínimo 3 carácteres</p>
+                }
+        </div>
+
+        <div class="my-4">
+            <label for="email" class="form-label"><strong>Email usuario</strong></label>
+            <input type="text" class="form-control border-secondary-subtle" placeholder="Introduce email de usuario" formControlName="email" id="email">
+            @if(checkControl ("email", "required")) {
+                <p class="error"><i class="fa-solid fa-circle-exclamation"></i> Campo obligatorio</p>
+                }
+            @if(checkControl ("email", "pattern")) {
+                <p class="error"><i class="fa-solid fa-circle-xmark"></i> Email incorrecto</p>
+                }
+        </div>
+
+        <div class="my-4">
+            <label for="image" class="form-label"><strong>Imagen usuario</strong></label>
+            <input type="text" class="form-control border-secondary-subtle" placeholder="Introduce imagen de usuario" formControlName="image" id="image">
+            @if(checkControl ("image", "required")) {
+                <p class="error"><i class="fa-solid fa-circle-exclamation"></i> Campo obligatorio</p>
+                }
+            @if(checkControl ("image", "pattern")) {
+                <p class="error"><i class="fa-solid fa-circle-xmark"></i> URL incorrecta</p>
+                }
+        </div>
+
+
+        <input type="submit" class="btn btn-success p-2 px-4" value={{tipoButton}} [disabled]="!modelForm.valid">
+
+
+
+    </form>
+</section>
